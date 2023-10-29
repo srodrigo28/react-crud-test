@@ -1,0 +1,14 @@
+{
+  "categoria": [
+    {
+      "id": 2,
+      "nome": "Front-End 2",
+      "descricao": "Web Moderno 2023"
+    },
+    {
+      "nome": "PHP Web",
+      "descricao": "PHP Full Stalk",
+      "id": 3
+    }
+  ]
+}
