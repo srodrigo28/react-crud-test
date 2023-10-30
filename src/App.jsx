@@ -1,12 +1,13 @@
-import { Categoria } from "./views/Categoria"
-
+// import { Categoria } from "./views/Categoria"
+import { Users } from "./views/Users"
 
 function App() {
 
 
   return (
     <>
-       <Categoria />
+       {/* <Categoria /> */}
+       <Users />
     </>
   )
 }

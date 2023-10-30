@@ -10,5 +10,17 @@
       "descricao": "PHP Full Stalk",
       "id": 3
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "nome": "Edson",
+      "senha": "2020Admin"
+    },
+    {
+      "id": 2,
+      "nome": "Rodrigo",
+      "senha": "2020admin"
+    }
   ]
 }

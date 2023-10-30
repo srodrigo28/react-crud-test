@@ -30,7 +30,7 @@ export function Categoria(){
             setNome(''), setDescricao('')
         })
         .catch( (error ) => {
-            console('Error: ' + error)
+            console.log('Error: ' + error)
         })
     }
 
@@ -39,12 +39,13 @@ export function Categoria(){
         // console.log('Remover !!! ')
 
             const res = window.confirm('Deseja realmente excluir? ' + nome)
-                if(res === true){
-                    axios.delete(`${url}/${id}`)
-                    console.log(id);
-                    return false
-                }else{
-                    console.log('error')
+            
+            if(res === true){
+                axios.delete(`${url}/${id}`)
+                console.log(id);
+                return false
+            }else{
+                console.log('error')
             }
     }
 
