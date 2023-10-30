@@ -48,7 +48,7 @@ export function Users(){
                 <input type="text" placeholder="Senha do Usuario" onChange={ e => setSenha(e.target.value) } value={senha}  />
 
                 <input type="hidden" value={id} name="id" onChange={ e => setId(e.target.value)} />
-                <button onClick={newUser}>Cadastrar um Usuário</button>
+                <button onClick={newUser}>Cadastrar</button>
             </form>
 
             <table>

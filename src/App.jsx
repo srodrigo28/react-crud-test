@@ -1,4 +1,3 @@
-// import { Categoria } from "./views/Categoria"
 import { Users } from "./views/Users"
 
 function App() {
@@ -6,7 +5,6 @@ function App() {
 
   return (
     <>
-       {/* <Categoria /> */}
        <Users />
     </>
   )
