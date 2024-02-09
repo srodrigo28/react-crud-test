@@ -7,6 +7,8 @@ export function Users(){
     const [users, setUsers] = useState([])
     const [ id, setId ]   = useState("")
     const [nome, setNome] = useState("");
+    const [email, setEmail] = useState("");
+    const [telefone, setTelefone] = useState("");
     const [senha, setSenha] = useState("");
 
     useEffect(() => {
@@ -19,6 +21,8 @@ export function Users(){
 
         axios.post(url, {
             nome,
+            email,
+            telefone,
             senha
         })
         .then(() => {
@@ -42,20 +46,66 @@ export function Users(){
     }
 
     return(
-        <>
+        <div className="container">
             <form>
-                <input type="text" placeholder="Nome de Usuario" onChange={ e => setNome(e.target.value) } value={nome} />
-                <input type="text" placeholder="Senha do Usuario" onChange={ e => setSenha(e.target.value) } value={senha}  />
+                <h1 className="text-center mt-5 mb-5">Novo Usuário</h1>
+                <div className="row mb-5">
+                    <div className="col-3">
+                        <input 
+                            type="text" 
+                            value={nome}
+                            className="form-control"
+                            placeholder="Nome de Usuario" 
+                            onChange={ e => setNome(e.target.value) } 
+                        />
+                    </div>
+                    <div className="col-3">
+                        <input 
+                            type="text" 
+                            value={email}
+                            className="form-control"
+                            placeholder="Nome de Email" 
+                            onChange={ e => setEmail(e.target.value) } 
+                        />
+                    </div>
+                    <div className="col-2">
+                        <input 
+                            type="text" 
+                            value={telefone}
+                            className="form-control"
+                            placeholder="(62) 9999-0000" 
+                            onChange={ e => setTelefone(e.target.value) } 
+                        />
+                    </div>
+                    <div className="col-2">
+                        <input 
+                            type="password" 
+                            value={senha}
+                            className="form-control"
+                            placeholder="Senha do Usuario" 
+                            onChange={ e => setSenha(e.target.value) } 
+                        />
+                    </div>
+                    <input 
+                        name="id" 
+                        value={id} 
+                        type="hidden" 
+                        onChange={ e => setId(e.target.value)}
+                    />
 
-                <input type="hidden" value={id} name="id" onChange={ e => setId(e.target.value)} />
-                <button onClick={newUser}>Cadastrar</button>
+                    <div className="col">
+                    <button onClick={newUser} className="btn btn-outline-primary" >Cadastrar</button> 
+                    </div>
+                </div>
             </form>
 
-            <table>
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
                         <th>Senha</th>
                         <th>Ações</th>
                     </tr>
@@ -66,9 +116,11 @@ export function Users(){
                             <tr key={user.id}>
                                 <td>{user.id}</td>
                                 <td>{user.nome}</td>
+                                <td>{user.email}</td>
+                                <td>{user.telefone}</td>
                                 <td>{user.senha}</td>
                                 <td>
-                                    <button onClick={ () => removeUser(user.id, user.nome)} >
+                                    <button className="btn btn-danger" onClick={ () => removeUser(user.id, user.nome)} >
                                         Excluir
                                     </button>
                                 </td>
@@ -77,7 +129,7 @@ export function Users(){
                     }
                 </tbody>
             </table>
-        </>
+        </div>
     )
 
 }

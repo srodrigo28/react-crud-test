@@ -11,5 +11,34 @@
       "id": 3
     }
   ],
-  "user": []
+  "user": [
+    {
+      "nome": "Sonia",
+      "email": "sonia@gmail.com",
+      "telefone": "62 8879-2020",
+      "senha": "123",
+      "id": 1
+    },
+    {
+      "nome": "Ana Silva",
+      "email": "ana@gmail.com",
+      "telefone": "62 8879-2020",
+      "senha": "123",
+      "id": 2
+    },
+    {
+      "nome": "Claudio",
+      "email": "ana@gmail.com",
+      "telefone": "62 8879-2020",
+      "senha": "123",
+      "id": 3
+    },
+    {
+      "nome": "Daniel Oliveira",
+      "email": "daniel@terra.com",
+      "telefone": "62 98888-2153",
+      "senha": "3215sadf",
+      "id": 4
+    }
+  ]
 }
